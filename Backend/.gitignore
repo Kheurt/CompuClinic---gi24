@@ -112,6 +112,9 @@ celerybeat.pid
 env.bak/
 venv.bak/
 
+#Database
+sqlite3.db
+
 # Spyder project settings
 .spyderproject
 .spyproject
