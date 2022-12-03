@@ -124,7 +124,8 @@ class Dossier(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     matricule = models.CharField(max_length=20, unique=True)
     date_creation = models.DateTimeField(auto_now_add=True, editable=False)
-    patient = models.OneToOneField('Patient', on_delete=models.SET_NULL, null=True)
+    patient = models.ForeignKey('Patient', db_column= 'patient_id', on_delete=models.SET_NULL, blank=False, null=True)
+    # patient = models.OneToOneField('Patient', on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return "Dossier " + self.matricule

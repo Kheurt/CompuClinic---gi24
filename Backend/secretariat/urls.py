@@ -33,6 +33,7 @@ urlpatterns = [
     path('patients/<pk>/externer-patient/', views.ExternerPatient.as_view()),
     path('patients/<pk>/quittances/', views.ListeQuittanceView.as_view()),
     path('patients/<pk>/bons/', views.ListeBonView.as_view()),
+    path('secretariat/<pk>/data-you', views.GeneratePdf.as_view()),
     path('enums/', views.EnumView.as_view()),
     
     # Swagger and Redoc UIS
